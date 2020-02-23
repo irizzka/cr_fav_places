@@ -1,5 +1,6 @@
 import 'package:cr_fav_places/providers/great_places_provider.dart';
 import 'package:cr_fav_places/screens/add_place_screen.dart';
+import 'package:cr_fav_places/screens/place_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -42,7 +43,8 @@ class PlacesListScreen extends StatelessWidget {
                                     ),
                                     title: Text(greatPlaces.items[index].title),
                                     onTap: () {
-                                      Navigator.of(context).pop();
+                                      Navigator.of(context).pushNamed(PlaceDetailScreen.routeName, arguments: greatPlaces.items[index].id);
+                                     // Navigator.of(context).pop();
                                     },
                                   )),
                 ),
