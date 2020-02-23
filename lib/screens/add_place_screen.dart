@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:cr_fav_places/models/place.dart';
 import 'package:cr_fav_places/providers/great_places_provider.dart';
 import 'package:cr_fav_places/widgets/image_input.dart';
+import 'package:cr_fav_places/widgets/location_input.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -51,8 +52,11 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                         labelText: 'Title'
                       ),
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(height: 10.0),
                     ImageInput(_selectImage),
+                    SizedBox(height: 10.0),
+                    LocationInput(),
+
                   ],
                 ),
               ),
